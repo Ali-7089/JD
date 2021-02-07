@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999;
+    width: 400px;
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px;
+    
+}
+
+.animate{
+    animation: anim 30s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+#back{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+    /* background-size: cover;    */
+    background-image: url(https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    justify-content: center;
+}
+
+#wrapper h1{
+    font-size: 500px;
+    font-weight: 900;
+    font-family: 'montserrat';
+    color: #ffffff;
+}
+
+#circle{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ffffff;
+    position: absolute;
+    z-index: 9999999;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+#white{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transform: translate(0,-50%); */
+    width: 52%;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 48%; 
+    right: 0;
+}
+
+#black{
+    width: 230px;
+    height: 300px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+}
+
+#black p{
+    color: #ffffff;
+    text-align: center;
+    line-height: 26px;
+    padding: 40px;
+    font-family: 'playfair display';
+}
+
+#linelem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 250px;
+    margin: 0 30px;
+    height: 2px;
+    background-color: black;
+}
+
+#linelem i:hover{
+    cursor: pointer;
+}
+
+#linelem h5{
+    font-family: 'montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+
+#back h4{
+    text-transform: uppercase;
+    font-family: 'montserrat';
+    transform: rotate(-90deg);
+    left: -80px;
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 15px;
+    position: absolute;
+    top: 50%;
+}
+
+
+@keyframes anim{
+    to{
+      stroke-dashoffset: 450px;
+    }
+}
